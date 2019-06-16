@@ -1,0 +1,22 @@
+.content {
+  margin: auto;
+  width: 50%;
+  .headline {
+    text-align: center;
+  }
+}
+
+.links {
+  float: right;
+  display: flex;
+  flex-flow: column;
+  button {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    width: 90%;
+  }
+}
