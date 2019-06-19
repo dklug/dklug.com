@@ -6,12 +6,15 @@
   }
 }
 
-.links {
-  float: right;
-  display: flex;
-  flex-flow: column;
-  button {
-    margin-bottom: 1rem;
+.links-container {
+  position: absolute;
+  top: 0;
+  .links {
+    display: flex;
+    flex-flow: column;
+    button {
+      margin-bottom: 1rem;
+    }
   }
 }
 
