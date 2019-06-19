@@ -8,11 +8,17 @@
 }
 
 .links-container {
+  $button-size: 4rem;
+  width: $button-size;
   .links {
     display: flex;
     flex-flow: column;
-    button {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
       margin-bottom: 1rem;
+      cursor: pointer;
     }
   }
 }
