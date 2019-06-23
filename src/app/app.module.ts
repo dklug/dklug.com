@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { MatButtonModule } from '@angular/material';
 import { CssBenchComponent } from './css-bench/css-bench.component';
+import { PeterComponent } from './peter/peter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CssBenchComponent,
+    PeterComponent,
   ],
   imports: [
     BrowserModule,
