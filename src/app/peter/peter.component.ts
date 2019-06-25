@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-peter',
@@ -8,19 +8,28 @@ import { Component, OnInit } from '@angular/core';
 export class PeterComponent implements OnInit {
   // peters = [];
   peters = 0;
-  interval = 1500;
+  interval = 5000;
   peterRef: any;
+  @ViewChild('div', { static: false }) peterDiv: ElementRef;
 
-  constructor() { }
+  constructor(elementRef: ElementRef) { }
 
   ngOnInit() {
     this.peterRef = document.getElementById('peter');
-    setInterval(() => {
-      this.addPeter();
-    }, this.interval);
+    // setInterval(() => {
+    this.addPeter();
+    // }, this.interval);
+    // for (let p = 0; p < this.peters; p++) {
+    //   this.addPeter();
+    //   this.peters--;
+    // }
   }
 
   addPeter() {
+    console.log(`addPeter ${this.peters}, interval ${this.interval}`);
+    setTimeout(() => {
+      this.addPeter();
+    }, this.interval);
     // this.peters.push({
     //   style: `
     //   position: absolute;
@@ -33,19 +42,20 @@ export class PeterComponent implements OnInit {
     //   margintop: this.getRand99(),
     // });
     this.peters++;
-    const newPeter = `<div style="
+    this.interval += 1000;
+    const newPeter = `<div
+    style="
     position:absolute;
     // width:${this.getRand99()}%;
     // height:${this.getRand99()}%;
     margin-left:${this.getRand99()}vw;
     margin-top:${this.getRand99()}vh;
     ">
-    <video style="" autoplay loop>
-        <source src="../../assets/PeterKnee.webm"> 
+    <video style="" autoplay loop controls>
+        <source src="../../assets/PeterKnee.webm">
     </video>
     </div>`;
     this.peterRef.innerHTML += newPeter;
-    // <img height:${this.getRand10()}rem width:${this.getRand10()}rem src="../../assets/peterknee.gif">
   }
 
   getRand99() {
