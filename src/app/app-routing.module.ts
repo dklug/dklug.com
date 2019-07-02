@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'cssbench', component: CssBenchComponent },
   { path: 'peter', component: PeterComponent },
+  { path: 'peter/:youtubeLink', component: PeterComponent },
   { path: '**', component: HomeComponent },
 ];
 

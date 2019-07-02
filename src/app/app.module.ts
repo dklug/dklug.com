@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { MatButtonModule } from '@angular/material';
 import { CssBenchComponent } from './css-bench/css-bench.component';
 import { PeterComponent } from './peter/peter.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { PeterComponent } from './peter/peter.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

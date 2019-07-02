@@ -1,8 +1,23 @@
-.peter {
+.peters {
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-size: contain;
     overflow: hidden;
+}
+
+.youtube-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 3rem;
+    z-index: 1;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    position: fixed;
 }
