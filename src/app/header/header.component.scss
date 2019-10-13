@@ -2,12 +2,17 @@
 	padding: 1em;
 	border-bottom: 1px solid whitesmoke;
 	font-size: xx-large;
-    font: 400 24px/32px Roboto, "Helvetica Neue", sans-serif;
     .home-link {
+        font: 400 24px/32px Roboto, "Helvetica Neue", sans-serif;
         color: unset;
         text-decoration: none;
     }
 	.theme-toggle {
-		float: right;
+        float: right;
+        user-select: none;
+        .theme-icon {
+            position: absolute;
+            right: 2em;
+        }
 	}
 }

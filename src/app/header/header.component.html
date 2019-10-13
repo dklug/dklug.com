@@ -1,6 +1,11 @@
 <div class="header">
   <a [routerLink]="['/home']" class="home-link">DKlug</a>
-  <div class="theme-toggle">
-    <a>🌙</a>
+  <div (click)="switchTheme()" class="theme-toggle">
+    <div [@switchTheme]="lightTheme ? 'visible' : 'invisible'" class="theme-icon">
+      <div>🌙</div>
+    </div>
+    <div [@switchTheme]="lightTheme ? 'invisible' : 'visible'" class="theme-icon">
+      <div>🌞</div>
+    </div>
   </div>
 </div>
