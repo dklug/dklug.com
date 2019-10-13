@@ -1,0 +1,13 @@
+.header {
+	padding: 1em;
+	border-bottom: 1px solid whitesmoke;
+	font-size: xx-large;
+    font: 400 24px/32px Roboto, "Helvetica Neue", sans-serif;
+    .home-link {
+        color: unset;
+        text-decoration: none;
+    }
+	.theme-toggle {
+		float: right;
+	}
+}

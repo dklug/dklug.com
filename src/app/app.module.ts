@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material';
 import { CssBenchComponent } from './css-bench/css-bench.component';
 import { PeterComponent } from './peter/peter.component';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     CssBenchComponent,
     PeterComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
