@@ -1,6 +1,6 @@
 .header {
 	padding: 1em;
-	border-bottom: 1px solid whitesmoke;
+	border-bottom: 1px solid lightgray;
 	font-size: xx-large;
     .home-link {
         font: 400 24px/32px Roboto, "Helvetica Neue", sans-serif;
@@ -16,4 +16,11 @@
             right: 2em;
         }
 	}
+}
+
+
+.dark-theme {
+    background: #161616;
+    color: rgb(218,214,206);
+    border-bottom: 1px solid grey;
 }

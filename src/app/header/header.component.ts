@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { Globals } from 'src/globals';
 
 @Component({
   selector: 'app-header',
@@ -20,17 +21,23 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   ]
 })
 export class HeaderComponent implements OnInit {
-  lightTheme = true;
-
-  constructor() { }
+  // lightTheme = false;
+  constructor(public globals: Globals) { }
 
   ngOnInit() {
+    if (!JSON.parse(localStorage.getItem('lightTheme'))) {
+      localStorage.setItem('lightTheme', 'true');
+      this.globals.lightTheme = true;
+    }
   }
 
   switchTheme() {
-    console.log('switchTheme');
-    this.lightTheme = !this.lightTheme;
-    console.log(`lightTheme ${this.lightTheme}`);
+    if (!JSON.parse(localStorage.getItem('lightTheme'))) {
+      localStorage.setItem('lightTheme', 'true');
+      this.globals.lightTheme = true;
+    } else {
+      localStorage.setItem('lightTheme', 'false');
+      this.globals.lightTheme = false;
+    }
   }
-
 }

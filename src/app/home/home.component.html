@@ -1,14 +1,16 @@
-<app-header></app-header>
-<div class="content">
-  <div class="headline">
-    <h1 class="mat-h1">Duncan Klug</h1>
-    <h2 class="mat-h2">My website isn't done yet, don't look!</h2>
-  </div>
-  <!-- <a mat-raised-button color="primary" routerLink="cssbench">>Trippy CSS</a> -->
-  <div class="links-container">
-    <div class="links">
-      <img src="../../assets/LI-In-Bug.png" onclick="window.open('https://www.linkedin.com/in/duncanklug/','_blank')">
-      <img src="../../assets/GitHub-Mark-120px-plus.png" onclick="window.open('https://github.com/dklug','_blank')">
+<div class="page-container" [class.dark-theme]="globals.lightTheme">
+  <app-header></app-header>
+  <div class="content" [class.dark-theme]="globals.lightTheme">
+    <div class="headline">
+      <h1 class="mat-h1">Duncan Klug</h1>
+      <h2 class="mat-h2">My website isn't done yet, don't look!</h2>
+    </div>
+    <!-- <a mat-raised-button color="primary" routerLink="cssbench">>Trippy CSS</a> -->
+    <div class="links-container">
+      <div class="links">
+        <img src="../../assets/LI-In-Bug.png" onclick="window.open('https://www.linkedin.com/in/duncanklug/','_blank')">
+        <img src="../../assets/GitHub-Mark-120px-plus.png" onclick="window.open('https://github.com/dklug','_blank')">
+      </div>
     </div>
   </div>
 </div>
